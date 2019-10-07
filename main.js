@@ -1,0 +1,1 @@
+console.log('project_2 link'); //just to make sure js file is linked to the html file
