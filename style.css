@@ -1,18 +1,27 @@
 * {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
+@keyframes mouse-animation {
+    0%   {background-image: url(img/mouse1.png)}
+    50% {background-image: url(img/mouse2.png)}
+    100%   {background-image: url(img/mouse1.png)}
+    
+  }
+
 #bracket {
-    background-color: lightsalmon;
+    transition: padding 0.3s;
+    /* background-color: lightsalmon; */
     transform: scale(1.5);
+    padding-left: 5px;
 }
 
 .fa-search {
     margin-left: 10px;
     margin-right: 10px;
 }
-
 
 #line {
     margin: 20px;
@@ -27,75 +36,87 @@
 
 #logo_box {
     text-align: center;
-    background-color: lightgreen;
-}
-
-#logo {
-    width: 50px;
-    height: 50px;
-    margin: 0;
+    /* background-color: lightgreen; */
     padding: 0;
 }
 
+#logo {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
 #main {
-    background-image: url(img/waterfall.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) , rgba(0,0,0,0), rgba(0, 0, 0, 0.4)), url(img/waterfall.jpg);
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    position: relative;
 }
 
 #main_top {
+    padding-top: 30px;
     display: grid;
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: 45% 10% 45%;
     width: 100%;
-    height: 6.5%;
-    background-color: yellow;
+    height: 8.5%;
+    /* background-color: yellow; */
     overflow: hidden;
   
 }
 
 #main_middle {
-    margin-top: 50vh;
+
+    padding-left:40px;
+    margin-top: 30vh;
     width: 100%;
     /* height: 30%; */
-    background-color: lightblue;
+    /* background-color: lightblue; */
     overflow: hidden;
 }
 
 #main_middle h1 {
     margin-top: 20px;
+    cursor: pointer;
+    font-size: 50px;
 }
 
 #main_bottom {
-    display: flex;
+    padding: 0 40px;
     position: absolute;
     bottom: 0;
     /* margin-top: 10%; */
     width: 100%;
-    height: 20%;
-    background-color: lightgreen;
+    height: 15%;
+    /* background-color: lightgreen; */
     overflow: hidden;
 }
 
 #mouse_container {
     transition: padding 0.5s;
     /* display: inline-block; */
-    position: relative;
     width: 30px;
     height: 90px;
-    margin-left: 20px;
-    float: right;
-    background-color: blueviolet;
+    /* margin-left: 20px; */
+    /* float: right; */
+    /* background-color: blueviolet; */
 }
 
 #mouse_animation {
+    cursor: pointer;
+    animation-name: mouse-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
     /* margin-left: 20px; */
-    background-color: rgba(255, 0, 0, 0.5);
-    background-image: url(img/mouse.png);
-    background-position-y: -105px;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    /* background-image: url(img/mouse.png); */
+    /* background-position-y: -105px; */
     background-size: 30px;
     height: 100%;
-    width: 31px;
+    width: 30px;
     background-repeat: no-repeat;
 }
 
@@ -104,14 +125,29 @@
 }
 
 #middle {
-    background-color: lightpink;
+    /* background-color: lightpink; */
     height: 100vh;
 }
 
 nav ul {
     float: right; 
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     padding: 4% 0;
+    padding-right: 40px;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+#read_more {
+    cursor: pointer;
+    transition: padding 0.01s;
+}
+
+#read_more:hover > #bracket {
+    padding: 0;
 }
 
 #search_container {
@@ -119,12 +155,12 @@ nav ul {
     display: grid;
     grid-template-columns: 20% 20%;
     cursor: pointer;
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
     width: 200px;
 }
 
 #search {
-    transition: padding 0.5s;
+    transition: 0.5s;
     padding-left: 5px;
   
 }
@@ -133,18 +169,59 @@ nav ul {
     padding-left: 0;
 }
 
+#sections_container {
+    display: grid;
+    grid-template-columns: auto 100px;
+    /* background-color: aqua; */
+
+}
+
 #sections {
-    background-color: darkgoldenrod;
+    margin-top: 40px;
+    /* background-color: darkgoldenrod; */
     display: grid;
     grid-template-columns: 23% 23% 23% 23%;
     width: 90%;
     height: 30px;
 }
 
+#sections li {
+    cursor: pointer;
+    width: 70px;
+    /* background-color: yellowgreen; */
+}
+
 #sign_in {
-    border: 1px solid black;
+    transition: background-color 1s;
+    border: 1px solid white;
     border-radius: 50px;
     padding: 5px;
+    cursor: pointer;
+}
+
+#sign_in:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#slider {
+    display: block;
+    margin-bottom: 30px;
+    width: 90%;
+    /* background-color: darkorange; */
+
+
+}
+
+#slider td {
+    border-top: 1px solid white;
+    height: 4px;
+    
+
+}
+
+#slider table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
 ul li {
