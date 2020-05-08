@@ -1,2 +1,4 @@
 # project_2
-Here we will try to recreate a website's structure and, hopefully, learn a lot from doing it
+An attempt to recreate a certain website without looking into its source code.
+
+<img src="screenshot/screenshot.jpg" width="500">
